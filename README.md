@@ -117,10 +117,9 @@ javascript touch mobile
 
 
 ```diff
-- text in red
-+ text in green
-! text in orange
-+ asd
-# text in gray
-@@ text in purple (and bold)@@
+- red
++ green
+! orange
+# gray
+@@ purple @@
 ```
