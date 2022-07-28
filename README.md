@@ -4,6 +4,35 @@ javascript touch mobile
 ## Mobile-Touch
 
   Sizlere javascript içindeki touch eventlerin ne kadar basit ve geliştirebilir olduğunu göstericem.
+  
+  Touch Eventleri;
+  1) <code>touchstart</code>, dokunmakla etkinleşen event listesidir.
+  2) <code>touchend</code>, dokunan parmağın artık dokunmaması durumunda etkinleşen event listesidir.
+  3) <code>touchmove</code>, dokunan parmağın temas eden her noktası için etkinleşen event listesidir.
+
+  Touch Komutları;
+  1) <code>touches</code>, Geçerli nesnedeki tüm temas noktalarının listesidir.
+  2) <code>targetTouches</code>, Temas noktaları aynı düğümde başlayan noktalarının listesidir.
+  3) <code>changedTouches</code>, Bir olayı tetiklerken değişen temas noktalarının listesidir.
+  
+  Diğer Komutlar;
+  1) <code>ctrlKey</code>, 'Ctrl' tuşuna basılıp basılmadığını gösterir.
+  2) <code>shiftKey</code>, 'shift' tuşuna basılıp basılmadığını gösterir.
+  3) <code>altKey</code>, 'alt' tuşuna basılıp basılmadığını gösterir.
+  4) <code>metaKey</code>, 'meta' tuşuna basılıp basılmadığını gösterir.
+  
+  style;
+  
+    #touch {
+        font-size: 40px;
+        height: 500px;
+        width: 100%;
+        border: 2px solid #000;
+    }
+    
+  Html;
+  
+    <div id="touch"></div>
 
 ## 1) touchstart & touchend 
     
