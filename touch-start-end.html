@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    #touch {
+        height: 200px;
+        width: 500px;
+        border: 2px solid #000;
+    }
+</style>
+<body>
+    <div id="touch">
+        
+    </div>
+
+    <script>
+        const touch = document.getElementById('touch')
+
+        touch.addEventListener('touchstart', event => {
+            // touch event started
+            //var x = event.touches[0].clientX;
+            //var y = event.touches[0].clientY;
+            touch.innerHTML = "touch start";
+            return ;
+        })
+        
+        touch.addEventListener('touchend', event => {
+        
+            touch.innerHTML = "touch end";
+            return ;
+        })          
+        
+    </script>
+    
+</body>
+</html>

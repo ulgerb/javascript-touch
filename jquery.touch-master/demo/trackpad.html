@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!-- jquery.touch v1.1.0 | (c) @ajlkn | github.com/ajlkn/jquery.touch | MIT licensed -->
+<html>
+	<head>
+		<title>Trackpad - jquery.touch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=false" />
+		<link rel="stylesheet" href="common.css" />
+		<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="../jquery.touch.js"></script>
+		<style>
+
+			#pad {
+				background-color: rgba(0,0,0,0.025);
+				border-radius: 1.5rem;
+				border: solid 1px rgba(0,0,0,0.25);
+				font-size: 2rem;
+				height: 18rem;
+				margin: 0 auto 2rem auto;
+				max-height: 45vh;
+				max-width: 100%;
+				width: 35rem;
+			}
+
+			#name {
+				font-size: 2rem;
+				margin: 0 0 0.75rem 0;
+			}
+
+		</style>
+		<script>
+			$(function() {
+
+				// Vars.
+					var	$pad = $('#pad'),
+						$status = $('#status'),
+						$name = $('#name'),
+						_name = function(s) { $name.text(s); },
+						_status = function(s) { $status.text(s); };
+
+				// Bind events.
+					$pad
+						.touch({
+
+							// Turn on document tracking so stuff works even if the cursor leaves the trackpad.
+								trackDocument: true,
+
+							// Normalize coordinates when/if the cursor leaves the trackpad.
+								trackDocumentNormalize: true,
+
+							// Prevent default events for drag/swipe (so the page doesn't scroll when you do those gestures).
+								preventDefault: {
+									drag: true,
+									swipe: true
+								}
+						
+						})
+
+						// Tap events.
+							.on('tap',				function(e, o) { _name('tap'); _status('Pos: ' + Math.round(o.ex) + ', ' + Math.round(o.ey)); })
+							.on('doubleTap',		function(e, o) { _name('doubleTap'); _status('Pos: ' + Math.round(o.ex) + ', ' + Math.round(o.ey)); })
+							.on('tapAndHold',		function(e, o) { _name('tapAndHold'); _status('Pos: ' + Math.round(o.ex) + ', ' + Math.round(o.ey)); })
+
+						// Drag events.
+							//.on('dragStart',		function(e, o) { _name('dragStart'); _status('Pos: ' + o.ex + ', ' + o.ey); })
+							.on('drag',			function(e, o) { _name('drag'); _status('Pos: ' + o.ex + ', ' + o.ey); })
+							//.on('dragEnd',		function(e, o) { _name('dragEnd'); _status('S: ' + o.start.ex + ', ' + o.start.ey + ', E: ' + o.end.ex + ', ' + o.end.ey + ', Dist: ' + Math.round(o.distance) + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); })
+
+						// Swipe event.
+							//.on('swipe',			function(e, o) { _name('swipe'); _status('Dist: ' + o.distance + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); })
+
+						// Swipe events.
+							//.on('swipeUp',			function(e, o) { _name('swipeUp'); _status('Dist: ' + Math.round(o.distance) + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); })
+							//.on('swipeDown',		function(e, o) { _name('swipeDown'); _status('Dist: ' + Math.round(o.distance) + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); })
+							//.on('swipeLeft',		function(e, o) { _name('swipeLeft'); _status('Dist: ' + Math.round(o.distance) + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); })
+							//.on('swipeRight',		function(e, o) { _name('swipeRight'); _status('Dist: ' + Math.round(o.distance) + ', Dur: ' + o.duration + ', V: ' + Math.round(o.velocity)); });
+
+			});
+
+		</script>
+	</head>
+	<body>
+
+		<h1>Trackpad</h1>
+		<div id="pad"></div>
+		<div id="name">...</div>
+		<div id="status">...</div>
+
+	</body>
+</html>
