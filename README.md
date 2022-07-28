@@ -1,9 +1,12 @@
 # javascript-touch
 javascript touch mobile
 
+![GitHub language count](https://img.shields.io/github/languages/count/{username}/{repo-name})
+![GitHub all releases](https://img.shields.io/github/downloads/{username}/{repo-name}/total)
+
 ## Mobile-Touch
 
-  Sizlere javascript içindeki touch eventlerin ne kadar basit ve geliştirebilir olduğunu göstericem.
+ + Sizlere javascript içindeki touch eventlerin ne kadar basit ve geliştirebilir olduğunu göstericem.
   
   Touch Eventleri;
   1) <code>touchstart</code>, dokunmakla etkinleşen event listesidir.
@@ -16,11 +19,11 @@ javascript touch mobile
   3) <code>changedTouches</code>, Bir olayı tetiklerken değişen temas noktalarının listesidir.
   
   Diğer Komutlar;
-  1) <code>ctrlKey</code>, 'Ctrl' tuşuna basılıp basılmadığını gösterir.
-  2) <code>shiftKey</code>, 'shift' tuşuna basılıp basılmadığını gösterir.
-  3) <code>altKey</code>, 'alt' tuşuna basılıp basılmadığını gösterir.
-  4) <code>metaKey</code>, 'meta' tuşuna basılıp basılmadığını gösterir.
-  
+  >1) <code>ctrlKey</code>, 'Ctrl' tuşuna basılıp basılmadığını gösterir.
+  >2) <code>shiftKey</code>, 'shift' tuşuna basılıp basılmadığını gösterir.
+  >3) <code>altKey</code>, 'alt' tuşuna basılıp basılmadığını gösterir.
+  >4) <code>metaKey</code>, 'meta' tuşuna basılıp basılmadığını gösterir.
+  ---
   style;
   
     #touch {
@@ -34,8 +37,8 @@ javascript touch mobile
   
     <div id="touch"></div>
 
-## 1) touchstart & touchend 
-    
+#### 1) touchstart & touchend 
+    ---
     const touch = document.getElementById('touch')
 
     touch.addEventListener('touchstart', e => {
@@ -54,8 +57,8 @@ javascript touch mobile
    - Kullanımı gayet basit çalıştırmak istediklerinizi ve sonlanmasını istediğiniz fonksiyonları ve etkileşimleri eventlerin içine yazmanız yeterlidir.
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
 
-## 2) touchmove
-  
+#### 2) touchmove
+  ---
     const touch = document.getElementById('touch')
 
     touch.addEventListener('touchmove', e => {
@@ -71,8 +74,8 @@ javascript touch mobile
    - Event border içine dokunduğumuz anda başlar ve her hareketinizde fonksiyon sürekli olarak tekrarlar.
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
   
-## 3) touchswip
-
+#### 3) touchswip
+---
     const touch = document.getElementById('touch')
     let touchstartX = 0
     let touchendX = 0
@@ -110,3 +113,13 @@ javascript touch mobile
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
    
    
+
+
+```diff
+- text in red
++ text in green
+! text in orange
++ asd
+# text in gray
+@@ text in purple (and bold)@@
+```
