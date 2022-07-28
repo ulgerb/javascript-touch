@@ -1,8 +1,6 @@
 # javascript-touch
 javascript touch mobile
 
-![GitHub language count](https://img.shields.io/github/languages/count/{username}/{repo-name})
-![GitHub all releases](https://img.shields.io/github/downloads/{username}/{repo-name}/total)
 
 ## Mobile-Touch
 
@@ -51,8 +49,9 @@ javascript touch mobile
         // touch e end
         touch.innerHTML = "touch end";
         return ;
-    })  
-    
+    })
+![touch-start-end](https://user-images.githubusercontent.com/98836519/181630339-e3cbf887-5ac3-44d6-8e59-0432104e5214.gif)
+
    - Border içindeki alana dokunduğumuzda fonksiyon çalışır, dokunmayı bıraktığımızda fonksiyon tekrar çalışır.
    - Kullanımı gayet basit çalıştırmak istediklerinizi ve sonlanmasını istediğiniz fonksiyonları ve etkileşimleri eventlerin içine yazmanız yeterlidir.
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
@@ -69,7 +68,8 @@ javascript touch mobile
         //console.log(x,y);
         touch.innerHTML = "clienty: "+x+ "<br>" +"clienty: "+y;
     })
-    
+![touch-move](https://user-images.githubusercontent.com/98836519/181631228-32996215-fe5c-4695-8c10-e4115999e3ed.gif)
+
    - Burada önemli olan <code>e.touches[0]</code> listedeki tek eleman olmasıdır. Bu yüzden index 0 almak zorunludur.
    - Event border içine dokunduğumuz anda başlar ve her hareketinizde fonksiyon sürekli olarak tekrarlar.
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
@@ -94,6 +94,7 @@ javascript touch mobile
         console.log(e.changedTouches[0].clientX);
         infoSwip()
     })
+![touch-swipp](https://user-images.githubusercontent.com/98836519/181631772-8fb2ebcc-5643-4665-b64d-090eaa9a0fce.gif)
 
     function infoSwip() {
         if (touchstartX > touchendX && touchstartY > touchendY){
