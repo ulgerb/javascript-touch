@@ -37,7 +37,7 @@
     <div id="touch"></div>
 
 #### 1) touchstart & touchend 
-    ---
+---
     const touch = document.getElementById('touch')
 
     touch.addEventListener('touchstart', e => {
@@ -58,7 +58,7 @@
    - Mobil ekranın her yerinde bu eventi çalıştırmak istiyorsanız, <code>touch.addEventListener</code> içindeki <code>touch</code> ifadesi yerine <code>document</code> yada <code>window</code> yazmak yeterli olucaktır.
 
 #### 2) touchmove
-  ---
+---
     const touch = document.getElementById('touch')
 
     touch.addEventListener('touchmove', e => {
